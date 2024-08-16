@@ -6,7 +6,7 @@ const port = 3000;
 
 app.use(express.static('public'));
 
-app.get("/", async(req, res) => {
+app.get("/home", async(req, res) => {
     try {
         const random_secret = await axios.get("https://secrets-api.appbrewery.com/random");
         res.render("index.ejs", {
